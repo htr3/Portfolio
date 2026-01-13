@@ -1,0 +1,76 @@
+Create a premium, 3D animated personal portfolio website.
+
+ABOUT ME:
+Use my uploaded resume as the main source of content.
+Extract my name, role, skills, experience, projects, education, and contact details from the resume.
+Use my existing HTML page as a reference for branding, colors, and layout preferences.
+
+DESIGN STYLE:
+- Futuristic, modern, and minimal
+- Dark theme with neon accents (blue / purple / cyan)
+- Glassmorphism + soft shadows
+- Smooth micro-interactions
+- High-end tech aesthetic (like Apple / Tesla / Stripe)
+
+3D & ANIMATIONS:
+- 3D hero section using Three.js / WebGL
+- Floating 3D shapes or particles reacting to mouse movement
+- Smooth camera transitions
+- Scroll-based animations (GSAP / Framer Motion)
+- Parallax depth effect
+- Hover effects with subtle 3D tilt
+
+SECTIONS:
+1. Hero Section
+   - 3D animated background
+   - My name in bold typography
+   - Role/title from resume
+   - Animated call-to-action buttons (View Projects, Download Resume)
+
+2. About Me
+   - Short professional summary from resume
+   - Animated reveal on scroll
+   - Interactive cards
+
+3. Skills
+   - 3D rotating skill cards or orbit-style icons
+   - Progress animations
+   - Categorized by Backend, Frontend, Tools, Cloud
+
+4. Experience
+   - Timeline animation
+   - Smooth transitions between roles
+   - Company logos and tech stacks
+
+5. Projects
+   - 3D project cards
+   - Hover to lift + glow effect
+   - Click opens detailed modal or page
+
+6. Resume Section
+   - Embedded downloadable resume
+   - Animated button
+
+7. Contact
+   - Animated contact form
+   - Floating icons (GitHub, LinkedIn, Email)
+   - Subtle 3D background motion
+
+TECH STACK:
+- HTML, CSS, JavaScript
+- Three.js for 3D
+- GSAP / Framer Motion for animations
+- Responsive for mobile, tablet, desktop
+- High performance and SEO optimized
+
+EXTRA:
+- Smooth page transitions
+- Custom cursor
+- Lazy loading
+- Accessibility friendly
+- Clean, production-ready code
+
+OUTPUT:
+- Complete folder structure
+- Clean and commented code
+- Ready to deploy
