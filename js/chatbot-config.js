@@ -5,7 +5,7 @@
  */
 window.CHATBOT_CONFIG = {
   ownerEmail: "vishalth115@gmail.com",
-  whatsappNumber: "918982762718",
+  whatsappNumber: "918010119123",
   siteName: "Vishal Thakur Portfolio",
 
   // Optional: add your CallMeBot API key for WhatsApp visit/message alerts
