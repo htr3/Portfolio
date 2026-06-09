@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vishal Thakur — Software Engineer. F1-inspired 3D portfolio showcasing Java backend, microservices, and cloud-native engineering." />
+  <meta name="author" content="Vishal Thakur" />
+  <meta name="theme-color" content="#0a0c10" />
+  <title>Vishal Thakur | Software Engineer — F1 Edition</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="rail">
+      <div class="nav-inner">
+        <a href="#top" class="brand">
+          <span class="brand-num">01</span>
+          <span class="brand-text">
+            <strong>V. THAKUR</strong>
+            <span>Software Engineer</span>
+          </span>
+        </a>
+        <nav class="nav-desktop" aria-label="Main navigation">
+          <a href="#about"><span class="nav-idx">/01</span> About</a>
+          <a href="#telemetry"><span class="nav-idx">/02</span> Skills</a>
+          <a href="#circuit"><span class="nav-idx">/03</span> Experience</a>
+          <a href="#garage"><span class="nav-idx">/04</span> Projects</a>
+          <a href="#pit"><span class="nav-idx">/05</span> Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="../index.html" class="btn btn-secondary btn-sm theme-switch" title="Back to the classic portfolio">← Classic</a>
+          <a href="../Vishal_Thakur_resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Resume</a>
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#telemetry">Skills</a>
+        <a href="#circuit">Experience</a>
+        <a href="#garage">Projects</a>
+        <a href="#pit">Contact</a>
+        <a href="../index.html" class="btn btn-secondary">← Back to Classic portfolio</a>
+        <a href="../Vishal_Thakur_resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Download Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ───── HERO ───── -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div id="hero-3d" class="hero-3d" aria-hidden="true">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-3d-fallback"></div>
+      </div>
+      <div class="rail hero-inner">
+        <p class="kicker"><span class="lights"><i></i><i></i><i></i><i></i><i></i></span> Lights out — open to opportunities</p>
+        <h1 class="hero-title">VISHAL<br/>THAKUR</h1>
+        <p class="hero-role"><span class="flag" aria-hidden="true"></span> Software Engineer · Java Backend</p>
+        <p class="hero-summary">Building microservices, REST APIs, and telecom integrations engineered for speed, reliability, and scale — like a car tuned for race day.</p>
+        <div class="hero-cta">
+          <a href="#garage" class="btn btn-primary">View the garage →</a>
+          <a href="#pit" class="btn btn-ghost">Enter the pit lane</a>
+        </div>
+        <div class="hero-gauges">
+          <div class="gauge"><span class="gauge-val">3+</span><span class="gauge-label">Seasons (yrs exp)</span></div>
+          <div class="gauge"><span class="gauge-val">3</span><span class="gauge-label">Global telecom clients</span></div>
+          <div class="gauge"><span class="gauge-val">1M+</span><span class="gauge-label">Daily transactions</span></div>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true"><span>SCROLL</span><i></i></div>
+    </section>
+
+    <!-- ───── ABOUT ───── -->
+    <section class="section" id="about">
+      <div class="rail">
+        <header class="sec-head reveal">
+          <p class="sec-tag">/01 — Driver Profile</p>
+          <h2 class="sec-title">Engineering systems built to perform under load</h2>
+        </header>
+        <div class="about-grid">
+          <article class="panel about-card reveal">
+            <p>Software Engineer with 3 years of experience in Java backend development, Spring Boot microservices, REST APIs, and SQL performance tuning. Experienced in telecom/BSS delivery, third-party integrations, CI/CD with Jenkins, and building internal automation tools for logs, deployments, and API debugging.</p>
+            <div class="chips">
+              <a class="chip" href="https://github.com/htr3" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="chip" href="https://www.linkedin.com/in/vishal-thakur-b394aa207" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="chip" href="mailto:vishalth115@gmail.com">Email</a>
+              <a class="chip" href="../Vishal_Thakur_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+          </article>
+          <aside class="spec-card reveal">
+            <div class="spec-row"><span>Team</span><strong>Amdocs · Software Engineer</strong></div>
+            <div class="spec-row"><span>Since</span><strong>Jul 2023 — Present</strong></div>
+            <div class="spec-row"><span>Base</span><strong>Pune, India</strong></div>
+            <div class="spec-row"><span>Power unit</span><strong>Java · Spring Boot · Camel</strong></div>
+            <div class="spec-row"><span>Education</span><strong>MCA, NIT Warangal</strong></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── SKILLS / TELEMETRY ───── -->
+    <section class="section section--alt" id="telemetry">
+      <div class="rail">
+        <header class="sec-head reveal">
+          <p class="sec-tag">/02 — Telemetry</p>
+          <h2 class="sec-title">Technical performance data</h2>
+        </header>
+        <div class="telemetry-grid">
+          <article class="panel skill-card reveal">
+            <h3>Languages</h3>
+            <div class="tags"><span>Java</span><span>Python</span><span>C++</span><span>C</span></div>
+          </article>
+          <article class="panel skill-card reveal">
+            <h3>Backend</h3>
+            <div class="tags"><span>Spring Boot</span><span>Apache Camel</span><span>REST APIs</span><span>Microservices</span></div>
+          </article>
+          <article class="panel skill-card reveal">
+            <h3>Data</h3>
+            <div class="tags"><span>MySQL</span><span>Couchbase</span><span>Kafka</span></div>
+          </article>
+          <article class="panel skill-card reveal">
+            <h3>Testing</h3>
+            <div class="tags"><span>JUnit</span><span>Mockito</span><span>TestNG</span></div>
+          </article>
+          <article class="panel skill-card reveal">
+            <h3>DevOps &amp; Cloud</h3>
+            <div class="tags"><span>Docker</span><span>Kubernetes</span><span>AWS</span><span>Jenkins</span><span>Git</span></div>
+          </article>
+          <article class="panel skill-card reveal">
+            <h3>Frontend</h3>
+            <div class="tags"><span>React</span><span>Angular</span><span>HTML</span><span>CSS</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── EXPERIENCE / CIRCUIT ───── -->
+    <section class="section" id="circuit">
+      <div class="rail">
+        <header class="sec-head reveal">
+          <p class="sec-tag">/03 — The Circuit</p>
+          <h2 class="sec-title">Professional experience</h2>
+        </header>
+        <article class="panel exp-card reveal">
+          <div class="exp-top">
+            <div>
+              <h3>Amdocs Development Center</h3>
+              <p class="exp-role">Software Engineer</p>
+            </div>
+            <div class="lap-time"><span>Stint</span><time>Jul 2023 — Present</time></div>
+          </div>
+          <div class="laps">
+            <div class="lap">
+              <div class="lap-head"><span class="lap-no">L1</span><h4>XL Axiata · Java Developer</h4></div>
+              <ul>
+                <li>Implemented third-party service integrations, improving internal and external system communication</li>
+                <li>Designed and optimized Camunda workflows and automated testing; improved performance test execution speed by 5%</li>
+                <li>Collaborated on database optimization, reducing query response time by 10% and reducing fallouts</li>
+              </ul>
+            </div>
+            <div class="lap">
+              <div class="lap-head"><span class="lap-no">L2</span><h4>Vodafone Germany · Software Developer</h4></div>
+              <ul>
+                <li>Developed applications using Java, Spring Boot, and REST APIs, resulting in 5% faster project delivery</li>
+                <li>Optimized complex SQL queries with indexing and query-tuning, cutting report generation time by over 10%</li>
+                <li>Automated testing using TestNG, raising coverage from 60% to 90%</li>
+              </ul>
+            </div>
+            <div class="lap">
+              <div class="lap-head"><span class="lap-no">L3</span><h4>Optima Philippines · Backend Developer</h4></div>
+              <ul>
+                <li>Built Apache Camel microservices handling 1M+ daily transactions with production-grade stability</li>
+                <li>Built Jenkins CI/CD pipelines, reducing manual deployment effort by 60%</li>
+                <li>Built internal automation tools: FuseLogger, SubscriberTool, SM Tool, and API Visualizer</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───── PROJECTS / GARAGE ───── -->
+    <section class="section section--alt" id="garage">
+      <div class="rail">
+        <header class="sec-head reveal">
+          <p class="sec-tag">/04 — The Garage</p>
+          <h2 class="sec-title">Selected builds</h2>
+        </header>
+        <div class="garage-grid">
+          <article class="panel build-card reveal">
+            <div class="build-head"><h3>Apna Shop</h3><span class="badge badge-live">● LIVE</span></div>
+            <p>Live, real-world retail management app — deployed and actively used by 3 shop owners for inventory, sales, customer credit (udhaar), trust scores, OTP/JWT auth, and analytics dashboards.</p>
+            <div class="tags"><span>React</span><span>TypeScript</span><span>Express</span><span>PostgreSQL</span><span>Drizzle</span><span>JWT</span></div>
+            <div class="build-links">
+              <a href="https://apna-shop-zeta.vercel.app/login" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Live demo →</a>
+            </div>
+          </article>
+          <article class="panel build-card reveal">
+            <div class="build-head"><h3>Job Hunt AI Agent</h3><span class="badge">Hunt</span></div>
+            <p>End-to-end job search automation across 8+ platforms with LLM scoring, SQLite tracking, Flask dashboard, resume tailoring, and optional Selenium auto-apply.</p>
+            <div class="tags"><span>Python</span><span>Flask</span><span>Selenium</span><span>SQLite</span><span>OpenAI</span><span>Docker</span></div>
+            <div class="build-links">
+              <a href="https://github.com/htr3/hunt" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            </div>
+          </article>
+          <article class="panel build-card reveal">
+            <div class="build-head"><h3>MS-BUILDER</h3></div>
+            <p>Microservice builder generating Spring Boot services from OpenAPI specs with REST APIs, Docker, and Jenkins pipelines.</p>
+            <div class="tags"><span>Spring Boot</span><span>OpenAPI</span><span>Docker</span><span>Jenkins</span></div>
+            <div class="build-links">
+              <a href="https://github.com/htr3/MS-BUILDER" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            </div>
+          </article>
+          <article class="panel build-card reveal">
+            <div class="build-head"><h3>NIT Warangal Summer School</h3><span class="badge">2023</span></div>
+            <p>STR-DFT algorithm implementation using Python, NumPy, and Pandas for signal processing, achieving accuracy rates exceeding 95%.</p>
+            <div class="tags"><span>Python</span><span>NumPy</span><span>Pandas</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───── CONTACT / PIT ───── -->
+    <section class="section" id="pit">
+      <div class="rail">
+        <header class="sec-head sec-head--center reveal">
+          <p class="sec-tag">/05 — Pit Lane</p>
+          <h2 class="sec-title">Let's get on track together</h2>
+          <p class="sec-desc">Open to full-time backend engineering roles and challenging system design problems.</p>
+        </header>
+        <article class="panel pit-card reveal">
+          <div class="pit-actions">
+            <a href="mailto:vishalth115@gmail.com" class="btn btn-primary">vishalth115@gmail.com</a>
+            <a href="tel:+918010119123" class="btn btn-secondary">+91 80101 19123</a>
+          </div>
+          <p class="pit-note">Typically responds within 24 hours</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="rail footer-inner">
+      <div class="footer-brand"><strong>VISHAL THAKUR</strong><span>Software Engineer · Pune, India</span></div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://github.com/htr3" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/vishal-thakur-b394aa207" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="../Vishal_Thakur_resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="mailto:vishalth115@gmail.com">Email</a>
+        <a href="../index.html">Classic</a>
+      </nav>
+      <p class="footer-copy">© <span id="year">2026</span> Vishal Thakur · F1 Edition</p>
+    </div>
+  </footer>
+
+  <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="false" aria-label="Play soundtrack">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="sound-label">SOUND</span>
+  </button>
+
+  <script type="module" src="js/scene.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
