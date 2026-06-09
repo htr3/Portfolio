@@ -389,6 +389,21 @@ ul {
   display: none;
 }
 
+.btn-mobile-only {
+  display: inline-flex;
+}
+
+.theme-switch {
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.theme-switch:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--fg);
+}
+
 /* ─── Cards ─── */
 .surface-card {
   background: var(--bg-card);
@@ -1055,6 +1070,10 @@ ul {
 @media (min-width: 640px) {
   .btn-hide-mobile {
     display: inline-flex;
+  }
+
+  .btn-mobile-only {
+    display: none;
   }
 
   .contact-actions {
