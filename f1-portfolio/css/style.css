@@ -158,9 +158,20 @@ ul { list-style: none; }
   display: flex; align-items: center; overflow: hidden;
   padding: calc(var(--header-h) + 2rem) 0 3rem;
 }
-.hero-3d { position: absolute; inset: 0; z-index: 0; opacity: 0; transition: opacity 0.8s var(--ease); }
-.hero-3d.is-ready { opacity: 1; }
+.hero-video { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #05070b; opacity: 0; transition: opacity 0.8s var(--ease); }
+.hero-video.is-ready { opacity: 1; }
+.hero-video video { width: 100%; height: 100%; object-fit: cover; }
+.hero-video::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(5,7,11,0.25) 0%, rgba(5,7,11,0.4) 100%);
+}
+.hero-3d { position: absolute; inset: 0; z-index: 1; opacity: 0; transition: opacity 0.8s var(--ease); pointer-events: none; }
+.hero-3d.is-ready { opacity: 0.8; }
 .hero-3d canvas { width: 100%; height: 100%; }
+@media (min-width: 768px) {
+  /* Accent the car to the right so the video reads as the main backdrop */
+  .hero-3d { left: auto; right: 0; width: 66%; }
+}
 .hero-3d-fallback {
   position: absolute; inset: 0; display: none;
   background: radial-gradient(circle at 70% 40%, rgba(225,6,0,0.25), transparent 55%), var(--bg);

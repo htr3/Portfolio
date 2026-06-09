@@ -34,7 +34,7 @@ function makeRenderer() {
 
 function makeScene() {
   scene = new THREE.Scene();
-  scene.fog = new THREE.FogExp2(0x05070b, 0.045);
+  // No fog / opaque ground: the car floats over the hero video as an accent.
 
   camera = new THREE.PerspectiveCamera(38, aspect(), 0.1, 100);
   camera.position.set(5.2, 2.4, 6.4);
@@ -126,47 +126,14 @@ function buildLogo(group) {
 }
 
 function buildTrack() {
-  const groundGeo = new THREE.PlaneGeometry(60, 60);
-  const groundMat = new THREE.MeshStandardMaterial({
-    color: 0x07090d,
-    roughness: 0.55,
-    metalness: 0.35,
-  });
-  const ground = new THREE.Mesh(groundGeo, groundMat);
+  // Transparent shadow-catcher: the only thing that renders on the ground
+  // plane is the car's contact shadow, so the hero video shows through.
+  const shadowMat = new THREE.ShadowMaterial({ opacity: 0.4 });
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(80, 80), shadowMat);
   ground.rotation.x = -Math.PI / 2;
   ground.position.y = -0.55;
   ground.receiveShadow = true;
   scene.add(ground);
-
-  // Center racing line + side kerb stripes
-  const lineMat = new THREE.MeshStandardMaterial({
-    color: 0xffffff,
-    emissive: 0x222222,
-    roughness: 0.4,
-  });
-  for (let i = -6; i <= 6; i++) {
-    const dash = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.02, 1.1), lineMat);
-    dash.position.set(0, -0.54, i * 2.4);
-    scene.add(dash);
-  }
-
-  const kerbMatA = new THREE.MeshStandardMaterial({ color: RACING_RED, roughness: 0.5 });
-  const kerbMatB = new THREE.MeshStandardMaterial({ color: 0xf2f2f2, roughness: 0.5 });
-  for (const side of [-4.2, 4.2]) {
-    for (let i = -8; i <= 8; i++) {
-      const kerb = new THREE.Mesh(
-        new THREE.BoxGeometry(0.7, 0.04, 0.7),
-        i % 2 === 0 ? kerbMatA : kerbMatB
-      );
-      kerb.position.set(side, -0.53, i * 0.7);
-      scene.add(kerb);
-    }
-  }
-
-  // Subtle grid glow behind the car
-  const grid = new THREE.GridHelper(60, 60, 0x1b2433, 0x10151d);
-  grid.position.y = -0.545;
-  scene.add(grid);
 }
 
 function buildCar() {

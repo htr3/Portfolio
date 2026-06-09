@@ -66,6 +66,25 @@
     sections.forEach((s) => spy.observe(s));
   }
 
+  // Hero background video — fade in when ready, hide gracefully if missing
+  const videoWrap = document.getElementById("hero-video");
+  const videoEl = document.getElementById("hero-video-el");
+  if (videoWrap && videoEl) {
+    const showVideo = () => videoWrap.classList.add("is-ready");
+    const hideVideo = () => {
+      videoWrap.classList.remove("is-ready");
+      videoWrap.style.display = "none";
+    };
+    if (videoEl.readyState >= 2) showVideo();
+    videoEl.addEventListener("canplay", showVideo);
+    videoEl.addEventListener("error", hideVideo);
+    const source = videoEl.querySelector("source");
+    if (source) source.addEventListener("error", hideVideo);
+    // Attempt playback (covers browsers that ignore the autoplay attribute)
+    const p = videoEl.play();
+    if (p && typeof p.catch === "function") p.catch(() => {});
+  }
+
   // Footer year
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
