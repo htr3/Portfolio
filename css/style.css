@@ -1067,6 +1067,17 @@ ul {
 }
 
 /* ─── Responsive ─── */
+@media (max-width: 600px) {
+  .nav-inner { gap: 0.75rem; }
+  .nav-actions { gap: 0.5rem; }
+  .brand-text span { display: none; }
+}
+
+@media (max-width: 400px) {
+  .brand-text strong { font-size: 0.8rem; }
+  .btn-mobile-only { padding: 0.4rem 0.65rem; }
+}
+
 @media (min-width: 640px) {
   .btn-hide-mobile {
     display: inline-flex;
